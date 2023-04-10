@@ -1,4 +1,4 @@
-package org.test1;
+package Entities;
 
 
 import javax.persistence.Column;
@@ -15,9 +15,9 @@ public class Song {
     @GeneratedValue(generator = "generator")
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column (name = "songName")
+    @Column (name = "songname")
     private String songName;
-    @Column (name = "songTitle")
+    @Column (name = "songtitle")
     private String songTitle;
     public Song() {}
     public Song(String songName, String songTitle) {
@@ -52,6 +52,6 @@ public class Song {
 
     @Override
     public String toString() {
-        return super.toString();
+        return ("songname= "+songName+"with title"+songTitle);
     }
 }
